@@ -9,7 +9,9 @@ export default function Home() {
         <h1>Le lecteur de pensées</h1>
         <img className="img" src={brain} alt="télépathie" />
         <p>L'appli qui lit dans vos pensées</p>
-        <Link to="/game">Jouer</Link>
+        <Link to="/game">
+          <button className="link">Jouer</button>
+        </Link>
       </div>
     </div>
   );
