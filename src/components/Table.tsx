@@ -108,9 +108,9 @@ export default function Table({ prediction }: TableProps) {
   ];
   return (
     <div className="table">
-      {emoji.map((value, key) => (
+      {emoji.map((item, key) => (
         <p className="table-cell" key={key}>
-          {key} : {value}
+          {key} : {item}
         </p>
       ))}
     </div>
