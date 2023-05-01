@@ -4,14 +4,34 @@ import Table from "./components/Table";
 import { Link } from "react-router-dom";
 
 function App() {
-  const data = ["🤐", "😘", "��", "🤣", "✅"];
-  const [prediction, setPrediction] = useState(
-    data[Math.round(Math.random() * data.length)]
-  );
+  // Here we create a new array with the emojis we want to display
+  const data = [
+    "🤐",
+    "😘",
+    "��",
+    "🤣",
+    "😍",
+    "😎",
+    "😜",
+    "😱",
+    "😡",
+    "😈",
+    "👻",
+    "👽",
+    "🤖",
+    "🎃",
+    "🦎",
+  ];
+  // Here we create a state that will hold the emoji we want to display
+  const [prediction] = useState(data[Math.round(Math.random() * data.length)]);
+  // Here we create a state that will hold the result
   const [result, setResult] = useState<string | null>(null);
+
+  // Here we create a function that will set the result state
   const handleResult = (): void => {
     setResult(prediction);
   };
+
   return (
     <div className="App">
       <p>

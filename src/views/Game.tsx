@@ -8,7 +8,6 @@ function Game() {
     "🤐",
     "😘",
     "🤣",
-    "✅",
     "🤔",
     "🤩",
     "🤪",
@@ -115,9 +114,7 @@ function Game() {
     "🦕",
     "🦖",
   ];
-  const [prediction, setPrediction] = useState(
-    data[Math.round(Math.random() * data.length)]
-  );
+  const [prediction] = useState(data[Math.round(Math.random() * data.length)]);
   const [result, setResult] = useState<string | null>(null);
   const handleResult = (): void => {
     setResult(prediction);
